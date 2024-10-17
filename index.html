@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b8abe0a58b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="music-player">
+        <nav class="menu">
+          <div class="circle">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <div class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+        <img
+          src="assets/images/468-thumbnail.png"
+          class="song-img"
+          alt="Album Art"
+        />
+        <h1 class="song-name">Despacito</h1>
+        <p class="song-artist">Luis Fonsi Ft. Puerto Rican</p>
+        <section class="player">
+          <audio id="song">
+            <source src="assets/music/Go! - NEFFEX.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <input
+            type="range"
+            value="0"
+            id="player-progress"
+            aria-label="Progress"
+          />
+          <div class="player-controls">
+            <button aria-label="Previous Song">
+              <i class="fa-solid fa-backward"></i>
+            </button>
+            <button id="play-btn" aria-label="Play/Pause" onclick="playPause()">
+              <i class="fa-solid fa-play" id="play-pause"></i>
+            </button>
+            <button aria-label="Next Song">
+              <i class="fa-solid fa-forward"></i>
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
